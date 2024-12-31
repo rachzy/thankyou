@@ -28,6 +28,7 @@ function displayContent() {
   loadingContainer.style.display = "none";
 }
 
+console.log("Got here");
 Promise.all(imagesAsPromises).then(() => {
   console.log("Loadig finished");
   clearInterval(loadingAnimation);
