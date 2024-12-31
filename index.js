@@ -29,6 +29,7 @@ function displayContent() {
 }
 
 Promise.all(imagesAsPromises).then(() => {
+  console.log("Loadig finished");
   clearInterval(loadingAnimation);
   displayContent();
 });
