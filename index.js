@@ -28,9 +28,12 @@ function displayContent() {
   loadingContainer.style.display = "none";
 }
 
-console.log("Got here");
-Promise.all(imagesAsPromises).then(() => {
-  console.log("Loadig finished");
-  clearInterval(loadingAnimation);
-  displayContent();
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    displayContent();
+  }, 4000);
+  Promise.all(imagesAsPromises).then(() => {
+    console.log("Loadig finished");
+    displayContent();
+  });
 });
